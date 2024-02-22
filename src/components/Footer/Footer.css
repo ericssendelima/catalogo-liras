@@ -1,0 +1,43 @@
+div .Footer {
+    /* background-color: rgb(113, 121, 118); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 0;
+    /* position: fixed;
+    bottom: 0 */
+
+  }
+  .Instagram{
+    margin: 0;
+    padding: 0;
+    /* background-color: blueviolet; */
+  }
+
+  span .insta{
+    color: white
+  }
+  
+  div .LogoFooter {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 38px;
+  }
+  
+  .lirasFooter {
+    width: 8rem;
+    /* background-color: blue; */
+  }
+  
+  .pFooter{
+    /* background-color: aqua; */
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }

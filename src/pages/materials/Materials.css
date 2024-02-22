@@ -1,0 +1,48 @@
+div .materials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: chartreuse; */
+  width: 100%;
+}
+
+li .materialsItems {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+div .bottomEpiHeader {
+  /* background-color: blueviolet; */
+  margin: 5px 0;
+  height: 360px;
+  display: flex;
+  align-items: center;
+}
+
+h3#cargo {
+  margin: 0;
+}
+
+span#epih2 {
+  /* background-color: blue; */
+  width: 90%;
+  margin-top: 10px;
+}
+
+span#visorCarrinho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(70, 85, 115, 0.3);
+  color: rgb(13, 13, 88);
+  height: 23px;
+  width: 23px;
+  padding: 15px 0;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+div .footerLogo{
+  width: 100%;
+}

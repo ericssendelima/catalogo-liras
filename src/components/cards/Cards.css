@@ -1,0 +1,34 @@
+div .priceButton {
+  /* background-color: aqua; */
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+div .prodInfo {
+  /* background-color: brown; */
+  color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: space-between;
+  height: 100%;
+}
+
+span#estoque {
+  font-size: 12px;
+}
+
+span#price{
+    padding-top: 8px;
+}
+
+div .card-footer {
+  /* background-color: blueviolet; */
+  display: flex;
+  justify-content: center;
+  padding: 0 8px;
+  height: 55px;
+}

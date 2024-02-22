@@ -1,0 +1,74 @@
+div .container{
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    background-color: #1c1c1c;
+    color:rgb(255, 255, 255);
+    border-radius: 10px;
+    /* border: 2px solid rgb(74, 71, 71); */
+    border: none;
+    height: 150px;
+    width: 21rem;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+div .header{
+    box-sizing: border-box;
+    display: flex;
+    justify-content:flex-start;
+    /* background-color: cadetblue; */
+    padding-top: 5px;
+    height: 9rem;
+}
+
+div .footer{
+    box-sizing: border-box;
+    /* background-color: blueviolet; */
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+ div .controls{
+    box-sizing: border-box;
+   /* background-color: rgb(226, 76, 43); */
+     display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-left: 0;
+    width: 40%;
+    
+    
+}
+
+div .info{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    padding: 2px 0 8px 5px;
+}
+
+p #codigo, #quantidade{
+    color: rgb(255, 255, 255)
+}
+
+h5#prodName{
+    font-size: 17px;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color:chartreuse
+}
+
