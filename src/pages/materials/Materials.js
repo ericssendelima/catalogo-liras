@@ -20,8 +20,8 @@ const Materials = () => {
 
   const [itens2, setItens2] = useState([]);
 
-  const baseURL =
-    "https://analog-patrol-408713-default-rtdb.firebaseio.com/products.json";
+  const baseURL = process.env.BASE_URL;
+    
 
   useEffect(() => {
     const getData = async () => {
