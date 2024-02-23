@@ -87,7 +87,7 @@ export const Cards = (props) => {
               color: "rgb(13, 13, 88)",
               border: "none",
               marginTop: "11px",
-              width: "97px",
+              width: "100px",
               height: "40px",
               fontWeight: "bold",
             }}
