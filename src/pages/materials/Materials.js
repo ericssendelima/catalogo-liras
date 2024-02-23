@@ -1,4 +1,5 @@
 import "./Materials.css";
+import 'dotenv/config';
 
 import React, { useContext, useEffect, useState } from "react";
 import { BsCartCheck } from "react-icons/bs";
@@ -20,7 +21,7 @@ const Materials = () => {
 
   const [itens2, setItens2] = useState([]);
 
-  const baseURL = process.env.BASE_URL;
+  const baseURL = process.env.REACT_APP_BASE_URL;
     
 
   useEffect(() => {
