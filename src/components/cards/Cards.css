@@ -21,8 +21,13 @@ span#estoque {
   font-size: 12px;
 }
 
-span#price{
-    padding-top: 8px;
+span#price {
+  padding-top: 8px;
+}
+
+span#adicionar {
+  background-color: blueviolet;
+  width: 100%;
 }
 
 div .card-footer {
@@ -31,4 +36,16 @@ div .card-footer {
   justify-content: center;
   padding: 0 8px;
   height: 55px;
+}
+
+button#buttonCard {
+  background-color: #f7d9d9;
+  color: rgb(13, 13, 88);
+  border: none;
+  margin-top: 11px;
+  width: 105px;
+  height: 40px;
+  font-weight: bold;
+  padding: 0;
+  border-radius: 10px;
 }

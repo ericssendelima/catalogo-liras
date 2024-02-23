@@ -2,7 +2,7 @@ import "./Cards.css";
 import React, { useContext } from "react";
 import { EpiListContext } from "../../context/EpiListContext";
 
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 export const Cards = (props) => {
   const { epiList, setEpiList } = useContext(EpiListContext);
@@ -17,7 +17,7 @@ export const Cards = (props) => {
     image,
     preco,
     estoque,
-    prodTotal
+    prodTotal,
   };
 
   //se for = 0 seta o objControl completo, se não, seta apenas a quantidade
@@ -79,21 +79,9 @@ export const Cards = (props) => {
             <span id="estoque">Estoque: {estoque}</span>
           </div>
 
-          <Button
-            className="buttonCard"
-            onClick={Adicionar}
-            style={{
-              backgroundColor: "#f7d9d9",
-              color: "rgb(13, 13, 88)",
-              border: "none",
-              marginTop: "11px",
-              width: "100px",
-              height: "40px",
-              fontWeight: "bold",
-            }}
-          >
-            Adicionar
-          </Button>
+          <button id="buttonCard" onClick={Adicionar}>
+            <span id="adicionar">Adicionar</span>
+          </button>
         </div>
       </Card.Footer>
     </Card>
