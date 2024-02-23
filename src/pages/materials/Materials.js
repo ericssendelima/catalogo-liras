@@ -1,5 +1,5 @@
 import "./Materials.css";
-import 'dotenv/config';
+import "dotenv/config";
 
 import React, { useContext, useEffect, useState } from "react";
 import { BsCartCheck } from "react-icons/bs";
@@ -22,7 +22,6 @@ const Materials = () => {
   const [itens2, setItens2] = useState([]);
 
   const baseURL = process.env.REACT_APP_BASE_URL;
-    
 
   useEffect(() => {
     const getData = async () => {
@@ -30,21 +29,20 @@ const Materials = () => {
         const res = await axios.get(baseURL);
 
         const data = res.data;
-        await localStorage.setItem("produtos", JSON.stringify(data));
-
+        await sessionStorage.setItem("produtos", JSON.stringify(data));
       } catch (error) {
         console.log(error);
       }
 
-      await setItens2(JSON.parse(localStorage.getItem("produtos")));
+      await setItens2(JSON.parse(sessionStorage.getItem("produtos")));
     };
 
-    if (localStorage.length === 0) {
+    if (sessionStorage.length === 0) {
       getData();
     } else {
-      setItens2(JSON.parse(localStorage.getItem("produtos")));
+      setItens2(JSON.parse(sessionStorage.getItem("produtos")));
     }
-  }, []);
+  }, [baseURL]);
 
   const Concluir = async () => {
     navigate("/Cart");
