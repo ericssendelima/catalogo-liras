@@ -13,7 +13,7 @@ div .footerCart {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   position: fixed;
   bottom: 15px;
 }
@@ -36,6 +36,23 @@ Button#buttonCart {
   font-weight: bold;
   width: 97px;
   height: 40px;
+  margin-left: 5px;
+
+  
+}
+
+Button#buttonCartEnviar {
+  color: rgb(0, 0, 0);
+  background-color: #000000;
+  background-image: url(../../images/botao-enviar.png);
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 97px;
+  height: 40px;
+  margin-right: 5px;
   
 }
 

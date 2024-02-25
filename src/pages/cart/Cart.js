@@ -1,3 +1,4 @@
+import "dotenv/config";
 import React, { useContext, useEffect, useState } from "react";
 import CardsCart from "../../components/CardsCart/CardsCart";
 import { useNavigate } from "react-router-dom";
@@ -45,7 +46,9 @@ const Cart = () => {
     .replace(/\*/g, "%2A")
     .replace(/%(?:7C|60|5E)/g, unescape);
 
-  const url = "https://api.whatsapp.com/send?text=" + conteudo;
+  const n = process.env.REACT_APP_NWPP;
+  // const url = "https://api.whatsapp.com/send?text=" + conteudo;
+  const url = `https://wa.me//${n}?text=${conteudo}`;
 
   const enviar = () => {
     window.location.href = url;
@@ -89,9 +92,7 @@ const Cart = () => {
             <Button id="buttonCart" onClick={voltar}>
               Voltar
             </Button>
-            <Button id="buttonCart" onClick={enviar}>
-              Enviar
-            </Button>
+            <Button id="buttonCartEnviar" onClick={enviar}></Button>
           </div>
           <Footer />
         </div>
