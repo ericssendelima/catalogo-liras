@@ -70,9 +70,11 @@ const CardsCart = (props) => {
           style={{
             // height: "auto",
             objectFit: "scale-down",
-            maxWidth: "60px",
+            maxWidth: "80px",
+            height: "100%",
             marginRight: "15px",
             boxSizing: "border-box",
+            backgroundColor: "white"
           }}
           src={props.image}
           rounded

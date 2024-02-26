@@ -47,8 +47,8 @@ export const Cards = (props) => {
       <Card.Header
         style={{
           padding: "0",
-          // backgroundColor: "#edc3c4",
-          width: "15rem",
+          backgroundColor: "white",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
         }}
