@@ -18,8 +18,10 @@ div .Footer {
     /* background-color: blueviolet; */
   }
 
-  span .insta{
-    color: white
+  span#insta{
+    color: black;
+    font-weight: bold;
+    /* background-color: aqua; */
   }
   
   div .LogoFooter {
@@ -40,4 +42,5 @@ div .Footer {
     /* background-color: aqua; */
     font-size: 0.7rem;
     margin-bottom: 0;
+    color: black;
   }

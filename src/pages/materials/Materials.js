@@ -3,6 +3,8 @@ import "dotenv/config";
 
 import React, { useContext, useEffect, useState } from "react";
 import { BsCartCheck } from "react-icons/bs";
+import { FaChevronUp } from "react-icons/fa";
+
 
 import { EpiListContext } from "../../context/EpiListContext";
 
@@ -22,6 +24,7 @@ const Materials = () => {
   const [itens2, setItens2] = useState([]);
 
   const baseURL = process.env.REACT_APP_BASE_URL;
+
 
 
 
@@ -53,7 +56,7 @@ const Materials = () => {
   return (
     <div className="materials">
       <Header />
-      <h2>Catálogo de produtos</h2>
+      <h2 id="tituloCatalogo">Catálogo de produtos</h2>
       <div className="divMaterialsList">
         <ol className="materialsList" style={{ padding: "0" }}>
           {itens2.map(
@@ -84,13 +87,13 @@ const Materials = () => {
             justifyContent: "center",
             alignItems: "center",
             padding: "0",
-            boxShadow: "0 0 30px rgb(13, 13, 50, 0.9)",
+            boxShadow: "0 0 10px black",
             position: "fixed",
             bottom: "6.5%",
             right: "16px",
             zIndex: "1",
-            color: "rgb(13, 13, 88)",
-            backgroundColor: "#f7d9d9",
+            color: "black",
+            backgroundColor: "#84b8b9",
             border: "none",
             fontWeight: "bold",
           }}
@@ -112,12 +115,13 @@ const Materials = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            boxShadow: "0 0 10px black",
             position: "fixed",
             bottom: "6.5%",
             left: "16px",
             zIndex: "1",
-            color: "rgb(13, 13, 88)",
-            backgroundColor: "#f7d9d9",
+            color: "black",
+            backgroundColor: "#84b8b9",
             border: "none",
           }}
           onClick={() =>
@@ -127,7 +131,7 @@ const Materials = () => {
             })
           }
         >
-          {"^"}
+          <FaChevronUp />
         </Button>
       </div>
       <div className="footerLogo">

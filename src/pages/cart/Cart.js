@@ -61,7 +61,7 @@ const Cart = () => {
   return (
     <div className="rootCart">
       <Header />
-      <h2>Carrinho</h2>
+      <h2 id="tituloCarrinho">Carrinho</h2>
 
       <div className="cart">
         <div className="itemsCartList">

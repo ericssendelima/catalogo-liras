@@ -30,13 +30,15 @@ div .CartFooter {
 
 Button#buttonCart {
   color: rgb(0, 0, 0);
-  background-color: #f7d9d9;
+  background-color: #84b8b9;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   width: 97px;
   height: 40px;
   margin-left: 5px;
+  box-shadow: 0 0 10px black;
+
 
   
 }
@@ -53,6 +55,8 @@ Button#buttonCartEnviar {
   width: 97px;
   height: 40px;
   margin-right: 5px;
+  box-shadow: 0 0 10px black;
+
   
 }
 
@@ -78,6 +82,8 @@ span#totalBuy{
   justify-content: space-around;
   position: fixed;
   bottom: 15px;
+  box-shadow: 0 0 10px black;
+
 }
 
 p#pTotal{
@@ -93,4 +99,10 @@ span#valorTotal{
   justify-content: center;
   border-radius: 7px;
   margin-bottom: 2px
+}
+
+h2#tituloCarrinho{
+  color: black;
+  font-weight: bold;
+  font-size: 32px;
 }

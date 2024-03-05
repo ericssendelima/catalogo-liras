@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 import { EpiListContext } from "../../context/EpiListContext";
 
 import { Button, Image } from "react-bootstrap";
+import { ImBin } from "react-icons/im";
+
 import "./CardsCart.css";
 
 const CardsCart = (props) => {
@@ -11,7 +13,6 @@ const CardsCart = (props) => {
 
   const [quantity, setQuantity] = useState(quantidadeEpi);
   const [totalPrice, setTotalPrice] = useState(preco * quantity);
-
 
   const objControl = {
     id,
@@ -70,11 +71,12 @@ const CardsCart = (props) => {
           style={{
             // height: "auto",
             objectFit: "scale-down",
-            maxWidth: "80px",
+            width: "80px",
             height: "100%",
             marginRight: "15px",
             boxSizing: "border-box",
-            backgroundColor: "white"
+            backgroundColor: "white",
+            backgroundSize: "cover",
           }}
           src={props.image}
           rounded
@@ -82,13 +84,10 @@ const CardsCart = (props) => {
 
         <div className="info">
           <h5 id="prodName">{props.name}</h5>
-          <h6>Valor: R$ {totalPrice.toFixed(2)}</h6>
-
+          <h6 id="valorProd">Valor: R$ {totalPrice.toFixed(2)}</h6>
 
           <div className="footer">
-
             <div className="controls">
-
               <Button
                 className="button"
                 variant="info"
@@ -106,6 +105,7 @@ const CardsCart = (props) => {
                   color: "rgb(13, 13, 88)",
                   backgroundColor: "#38b6ff",
                   border: "none",
+                  boxShadow: "0 0 5px black",
                 }}
               >
                 {"-"}
@@ -113,7 +113,18 @@ const CardsCart = (props) => {
 
               <p
                 id="quantidade"
-                style={{ margin: "0", padding: "5px", fontWeight: "bold" }}
+                style={{
+                  margin: "0",
+                  padding: "5px",
+                  fontWeight: "bold",
+                  height: "29px",
+                  width: "25px",
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 0 5px black",
+                }}
               >
                 {quantity}
               </p>
@@ -130,11 +141,15 @@ const CardsCart = (props) => {
                   width: "30px",
                   height: "30px",
                   borderRadius: "8px",
-                  margin: "1px",
                   fontWeight: "bold",
                   color: "rgb(13, 13, 88)",
                   backgroundColor: "#38b6ff",
                   border: "none",
+                  margin: "0",
+                  // fontSize: "20px",
+                  padding: "0",
+                  boxShadow: "0 0 5px black",
+
                 }}
               >
                 {"+"}
@@ -150,12 +165,16 @@ const CardsCart = (props) => {
                 justifyContent: "center",
                 alignItems: "center",
                 color: "black",
-                borderRadius: "10px",
-                margin: "1px",
-                fontWeight: "bold",
+                borderRadius: "8px",
+                width: "30px",
+                height: "30px",
+                marginRight: "4px",
+                fontSize: "17px",
+                padding: "0",
+                boxShadow: "0 0 10px black",
               }}
             >
-              Excluir
+              <ImBin />
             </Button>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../images/logo.png";
+import logo from "../../images/Nova_logo_lira_s_2-removebg-preview (1).png";
 
 import "./Header.css"
 import { useNavigate } from "react-router-dom";

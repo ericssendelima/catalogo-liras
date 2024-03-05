@@ -1,14 +1,14 @@
 import React from "react";
 
 import "./Footer.css";
-import logo from "../../images/logo.png";
+import logo from "../../images/Nova_logo_lira_s_2-removebg-preview (1).png";
 import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div className="Footer">
       <div className="Instagram">
-      <span className="insta">Siga-nos </span>
+      <span id="insta">Siga-nos </span>
         <a rel="Lira's Instagram" href="https://instagram.com/liras.cosmeticos">
           <FaInstagram />
         </a>

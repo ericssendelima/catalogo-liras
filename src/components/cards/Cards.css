@@ -19,10 +19,16 @@ div .prodInfo {
 
 span#estoque {
   font-size: 12px;
+  color: black;
+
 }
 
 span#price {
   padding-top: 8px;
+  color: black;
+
+  font-weight: bold;
+
 }
 
 span#adicionar {
@@ -40,10 +46,13 @@ div .card-footer {
 
 button#buttonCard {
   background-color: #f7d9d9;
-  color: rgb(13, 13, 88);
+  color: black;
+  box-shadow: 0 0 10px black;
+
+
   border: none;
   margin-top: 11px;
-  width: 105px;
+  width: 100px;
   height: 40px;
   font-weight: bold;
   padding: 0;

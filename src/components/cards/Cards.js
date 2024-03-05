@@ -31,7 +31,6 @@ export const Cards = (props) => {
     <Card
       border="secondary"
       style={{
-        color: "white",
         width: "16rem",
         height: "300px",
         padding: "0",
@@ -40,8 +39,10 @@ export const Cards = (props) => {
         marginBottom: "0",
         display: "block",
         justifyContent: "center",
+        backgroundColor: "#84b8b9",
+        boxShadow: "0 0 20px black"
       }}
-      bg="dark"
+      // bg="dark"
       text="white"
     >
       <Card.Header
@@ -68,7 +69,7 @@ export const Cards = (props) => {
           // backgroundColor: "violet"
         }}
       >
-        <Card.Text style={{ color: "white" }}>
+        <Card.Text style={{ color: "black", fontWeight: "bold" }}>
           <strong>{name}</strong>
         </Card.Text>
       </Card.Body>
