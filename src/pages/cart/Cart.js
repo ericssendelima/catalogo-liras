@@ -48,6 +48,8 @@ const Cart = () => {
 
   const n = process.env.REACT_APP_NWPP;
   // const url = "https://api.whatsapp.com/send?text=" + conteudo;
+
+  
   const url = `https://wa.me//${n}?text=${conteudo}`;
 
   const enviar = () => {
