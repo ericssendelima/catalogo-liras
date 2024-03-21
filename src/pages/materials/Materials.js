@@ -1,5 +1,4 @@
 import "./Materials.css";
-import "dotenv/config";
 
 import React, { useContext, useEffect, useState } from "react";
 import { BsCartCheck } from "react-icons/bs";
@@ -11,10 +10,13 @@ import { EpiListContext } from "../../context/EpiListContext";
 import { Cards } from "../../components/cards/Cards.js";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 import Footer from "../../components/Footer/Footer.js";
 import Header from "../../components/Header/Header.js";
+
+import { onValue, ref } from "firebase/database";
+
+import { db } from "../../firebase/config";
 
 const Materials = () => {
   const navigate = useNavigate();
@@ -23,31 +25,23 @@ const Materials = () => {
 
   const [itens2, setItens2] = useState([]);
 
-  const baseURL = process.env.REACT_APP_BASE_URL;
-
-
-
-
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await axios.get(baseURL);
+    onValue(
+      ref(db, `products/`),
+      (snapshot) => {
+        setItens2([]);
+        const data = snapshot.val();
 
-        const data = res.data;
-        await sessionStorage.setItem("produtos", JSON.stringify(data));
-      } catch (error) {
-        console.log(error);
-      }
 
-      await setItens2(JSON.parse(sessionStorage.getItem("produtos")));
-    };
+        if (data !== undefined) {
+          setItens2([...Object.values(data)]);
+        } 
+      },
+      (error) => alert(error)
+    );
+  }, []);
 
-    if (sessionStorage.length === 0) {
-      getData();
-    } else {
-      setItens2(JSON.parse(sessionStorage.getItem("produtos")));
-    }
-  }, [baseURL]);
+
 
   const Concluir = async () => {
     navigate("/Cart");
