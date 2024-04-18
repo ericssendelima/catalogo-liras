@@ -6,19 +6,20 @@ div .Logo {
   .liras {
     width: 8rem;
     /* background-color: rgb(80, 27, 70); */
-    margin-top: 25px;
+    margin-left: 30px;
   }
   
   div .Header {
-    /* background-color: rgb(113, 121, 118); */
+    background-color:black;
     display: flex;
     /* flex-direction: column; */
-    align-items: flex-start;
-
-
-    height: 90px;
-    width: 90%;
-    margin-top: 5px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 70px;
+    width: 100%;
+    /* margin-top: 5px; */
   }
 
   .instaButton{
@@ -29,4 +30,38 @@ div .Logo {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  span#totalBuy{
+    color: rgb(0, 0, 0);
+    background-color: #77abbd;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    right: 15px;
+    /* margin-top: 10px; */
+  
+  }
+
+  p#pTotal{
+    margin: 0;
+    /* background-color: aquamarine; */
+  }
+  
+  span#valorTotal{
+    background-color: rgb(0, 0, 0, 0.25);
+    width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    margin-bottom: 2px
   }

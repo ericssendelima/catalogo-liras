@@ -1,13 +1,15 @@
 import "./Cards.css";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { EpiListContext } from "../../context/EpiListContext";
 
 import { Card } from "react-bootstrap";
+import { MdAddTask } from "react-icons/md";
+import Descricao from "../Descricao/Descricao";
 
 export const Cards = (props) => {
   const { epiList, setEpiList } = useContext(EpiListContext);
 
-  let { id, name, quantidadeEpi, image, preco, estoque, prodTotal } = props;
+  let { id, name, quantidadeEpi, image, preco, estoque, prodTotal, descricao } = props;
 
   //criar um objeto para controlar aqueles que serão adicionados no cartContext
   const objControl = {
@@ -18,46 +20,55 @@ export const Cards = (props) => {
     preco,
     estoque,
     prodTotal,
+    descricao
   };
 
-  //se for = 0 seta o objControl completo, se não, seta apenas a quantidade
+  const [openDescription, setOpenDescription] = useState(false);
+
+  //funcões
   const Adicionar = () => {
     if (!epiList.filter((obj) => obj.id === objControl.id).length > 0) {
       setEpiList([...epiList, objControl]);
     }
   };
 
+  const detalhes = () => {
+    setOpenDescription(!openDescription);
+  };
+
   return (
     <Card
-      border="secondary"
       style={{
-        width: "16rem",
-        height: "300px",
+        width: "150px",
+        height: "260px",
         padding: "0",
-        border: "0",
-        margin: "20px",
-        marginBottom: "0",
+        border: "none",
+        margin: "8px",
+        marginBottom: "10px",
         display: "block",
         justifyContent: "center",
-        backgroundColor: "#84b8b9",
-        boxShadow: "0 0 20px black"
+        backgroundColor: "#457B9D",
+        // boxShadow: "0 0 3px black",
+        borderRadius: "8px",
       }}
-      // bg="dark"
-      text="white"
     >
       <Card.Header
         style={{
           padding: "0",
+          paddingTop: "4px",
           backgroundColor: "white",
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          border: "none",
+          borderTopLeftRadius: "8px",
+          borderTopRightRadius: "8px",
         }}
       >
         <Card.Img
           variant="top"
           src={image}
-          style={{ height: "160px", width: "15rem", objectFit: "scale-down" }}
+          style={{ height: "130px", width: "6rem", objectFit: "scale-down" }}
         />
       </Card.Header>
       <Card.Body
@@ -65,11 +76,14 @@ export const Cards = (props) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "79px",
-          // backgroundColor: "violet"
+          height: "69px",
+          padding: "0 6px 0 5px",
+          backgroundColor: "white",
         }}
       >
-        <Card.Text style={{ color: "black", fontWeight: "bold" }}>
+        <Card.Text
+          style={{ color: "black", fontSize: "14px", textAlign: "center" }}
+        >
           <strong>{name}</strong>
         </Card.Text>
       </Card.Body>
@@ -77,14 +91,25 @@ export const Cards = (props) => {
         <div className="priceButton">
           <div className="prodInfo">
             <span id="price">R$ {preco.toFixed(2)}</span>
-            <span id="estoque">Estoque: {estoque}</span>
+            {/* <span id="estoque">Estoque: {estoque}</span> */}
+            <span id="saibaMais" onClick={() => detalhes()}>
+              Descrição
+            </span>
           </div>
 
           <button id="buttonCard" onClick={Adicionar}>
-            <span id="adicionar">Adicionar</span>
+            <span id="adicionar">
+              <MdAddTask />
+            </span>
           </button>
         </div>
       </Card.Footer>
+      {openDescription && (
+        <Descricao
+          product={objControl}
+          openDescription={{ openDescription, setOpenDescription }}
+        />
+      )}
     </Card>
   );
 };

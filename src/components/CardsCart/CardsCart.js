@@ -77,6 +77,7 @@ const CardsCart = (props) => {
             boxSizing: "border-box",
             backgroundColor: "white",
             backgroundSize: "cover",
+            padding:"10px"
           }}
           src={props.image}
           rounded
@@ -123,7 +124,6 @@ const CardsCart = (props) => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: "0 0 5px black",
                 }}
               >
                 {quantity}
@@ -171,7 +171,7 @@ const CardsCart = (props) => {
                 marginRight: "4px",
                 fontSize: "17px",
                 padding: "0",
-                boxShadow: "0 0 10px black",
+                boxShadow: "0 0 5px black",
               }}
             >
               <ImBin />

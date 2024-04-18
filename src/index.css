@@ -1,19 +1,16 @@
 html {
-    background-color: #f7d9d9;
-    
+  background-color: black;
 
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 }
-#root { 
-    background-color: #f7d9d9;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: white;
-
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  font-family: monospace;
 }
-
-
-
-

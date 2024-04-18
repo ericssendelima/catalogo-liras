@@ -30,7 +30,7 @@ div .CartFooter {
 
 Button#buttonCart {
   color: rgb(0, 0, 0);
-  background-color: #84b8b9;
+  background-color: #77abbd;
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -54,7 +54,7 @@ Button#buttonCartEnviar {
   font-weight: bold;
   width: 97px;
   height: 40px;
-  margin-right: 5px;
+  margin-right: 10px;
   box-shadow: 0 0 10px black;
 
   
@@ -68,41 +68,13 @@ Button#buttonCartEnviar {
   align-items: center;
 }
 
-span#totalBuy{
-  color: rgb(0, 0, 0);
-  background-color: #6af1ab;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  width: 140px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  position: fixed;
-  bottom: 15px;
-  box-shadow: 0 0 10px black;
 
-}
 
-p#pTotal{
-  margin: 0;
-  /* background-color: aquamarine; */
-}
 
-span#valorTotal{
-  background-color: rgb(0, 0, 0, 0.25);
-  width: 95px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 7px;
-  margin-bottom: 2px
-}
 
 h2#tituloCarrinho{
-  color: black;
+  color: white;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
+  margin-top: 15px;
 }

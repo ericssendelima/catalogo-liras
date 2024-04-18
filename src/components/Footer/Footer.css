@@ -14,12 +14,13 @@ div .Footer {
   }
   .Instagram{
     margin: 0;
+    margin-top: 30px;
     padding: 0;
     /* background-color: blueviolet; */
   }
 
   span#insta{
-    color: black;
+    color: white;
     font-weight: bold;
     /* background-color: aqua; */
   }
@@ -30,7 +31,6 @@ div .Footer {
     justify-content: center;
     align-items: center;
     width: 70%;
-    margin-bottom: 38px;
   }
   
   .lirasFooter {
@@ -42,5 +42,5 @@ div .Footer {
     /* background-color: aqua; */
     font-size: 0.7rem;
     margin-bottom: 0;
-    color: black;
+    color: white;
   }

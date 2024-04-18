@@ -2,11 +2,11 @@ div .container {
   box-sizing: border-box;
   display: block;
   justify-content: center;
-  background-color: #84b8b9;
+  background-color: #77abbd;
   border-radius: 10px;
   /* border: 2px solid rgb(74, 71, 71); */
   border: none;
-  height: 150px;
+  height: 120px;
   width: 21rem;
   padding: 0;
   margin-top: 20px;
@@ -76,10 +76,3 @@ h6#valorProd {
   color: black;
 }
 
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  color: chartreuse;
-}

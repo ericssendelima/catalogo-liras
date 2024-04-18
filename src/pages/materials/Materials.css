@@ -5,7 +5,10 @@ div .materials {
   align-items: center;
   /* background-color: chartreuse; */
   width: 100%;
+  
 }
+
+
 
 li .materialsItems {
   display: block;
@@ -21,9 +24,12 @@ div .bottomEpiHeader {
 }
 
 h2#tituloCatalogo{
-  color: black;
+  color: white;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+
 }
 
 

@@ -1,24 +1,22 @@
-#root { 
-    background-color: #f7d9d9;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: white;
-    
+#root {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
 }
 
-ul, ol {
-    list-style-type: none;
-    padding-left: 0;
-
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-
-ol{ 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 0;
+ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
 }

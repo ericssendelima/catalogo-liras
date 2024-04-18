@@ -50,9 +50,9 @@ const Materials = () => {
   return (
     <div className="materials">
       <Header />
-      <h2 id="tituloCatalogo">Catálogo de produtos</h2>
+      <h2 id="tituloCatalogo">Catálogo</h2>
       <div className="divMaterialsList">
-        <ol className="materialsList" style={{ padding: "0" }}>
+        <ol id="materialsList" style={{ padding: "0" }}>
           {itens2.map(
             (item) =>
               !epiList.filter((epi) => epi.id === item.id).length > 0 && (
@@ -65,6 +65,7 @@ const Materials = () => {
                     preco={item.preco}
                     estoque={item.estoque}
                     prodTotal={item.prodTotal}
+                    descricao={item.descricao}
                   />
                 </li>
               )
@@ -75,20 +76,20 @@ const Materials = () => {
         <Button
           id="concluir"
           style={{
-            height: "50px",
+            height: "45px",
             width: "70px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             padding: "0",
-            boxShadow: "0 0 10px black",
+            boxShadow: "0 0 5px black",
             position: "fixed",
-            bottom: "6.5%",
+            bottom: "15px",
             right: "16px",
             zIndex: "1",
             color: "black",
-            backgroundColor: "#84b8b9",
-            border: "none",
+            backgroundColor: "#77abbd",
+            border: "1px solid black",
             fontWeight: "bold",
           }}
           variant="info"
@@ -102,21 +103,21 @@ const Materials = () => {
         <Button
           id="subir"
           style={{
-            height: "50px",
-            width: "50px",
+            height: "45px",
+            width: "45px",
             fontWeight: "bold",
             borderRadius: "50%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            boxShadow: "0 0 10px black",
+            boxShadow: "0 0 5px black",
             position: "fixed",
-            bottom: "6.5%",
+            bottom: "15px",
             left: "16px",
             zIndex: "1",
             color: "black",
-            backgroundColor: "#84b8b9",
-            border: "none",
+            backgroundColor: "#77abbd",
+            border: "1px solid black",
           }}
           onClick={() =>
             window.scrollTo({

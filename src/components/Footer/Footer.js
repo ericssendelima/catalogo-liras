@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Footer.css";
-import logo from "../../images/Nova_logo_lira_s_2-removebg-preview (1).png";
+import logo from "../../images/nome_liras_azul-removebg-preview.png";
 import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {

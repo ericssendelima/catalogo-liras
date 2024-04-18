@@ -84,10 +84,6 @@ const Cart = () => {
             })}
           </ul>
         </div>
-        <span id="totalBuy">
-          <p id="pTotal">Total do pedido</p>{" "}
-          <span id="valorTotal">R$ {totalTeste.toFixed(2)}</span>
-        </span>
 
         <div className="CartFooter">
           <div className="footerCart">
