@@ -17,6 +17,8 @@ import Header from "../../components/Header/Header.js";
 import { onValue, ref } from "firebase/database";
 
 import { db } from "../../firebase/config";
+import 'dotenv/config';
+
 
 const Materials = () => {
   const navigate = useNavigate();
@@ -27,7 +29,7 @@ const Materials = () => {
 
   useEffect(() => {
     onValue(
-      ref(db, `products/`),
+      ref(db, `${process.env.REACT_APP_PERM_ED}/products/`),
       (snapshot) => {
         setItens2([]);
         const data = snapshot.val();
