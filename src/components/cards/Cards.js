@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { EpiListContext } from "../../context/EpiListContext";
 
 import { Card } from "react-bootstrap";
-import { MdAddTask } from "react-icons/md";
+import { MdAddShoppingCart } from "react-icons/md";
 import Descricao from "../Descricao/Descricao";
 
 export const Cards = (props) => {
@@ -100,7 +100,7 @@ export const Cards = (props) => {
 
           <button id="buttonCard" onClick={Adicionar}>
             <span id="adicionar">
-              <MdAddTask />
+              <MdAddShoppingCart />
             </span>
           </button>
         </div>

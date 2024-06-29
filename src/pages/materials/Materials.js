@@ -27,6 +27,7 @@ const Materials = () => {
   const { epiList } = useContext(EpiListContext);
   const [itens, setItens] = useState([]);
   const [filterItens, setFilterItens] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     onValue(
@@ -38,6 +39,7 @@ const Materials = () => {
         if (data !== undefined) {
           setItens([...Object.values(data)]);
           setFilterItens([...Object.values(data)]);
+          setIsLoading(false);
         }
       },
       (error) => alert(error)
@@ -59,30 +61,50 @@ const Materials = () => {
       <Header />
       <h2 id="tituloCatalogo">Catálogo</h2>
 
-      {isCategoriesOpen ? <Categorias config={{ itens, setFilterItens, isCategoriesOpen, setIsCategoriesOpen }} /> : <div id="botaoCategorias"><button id="abrirCategorias" onClick={() => openCategories()}>Categorias <TbHandClick style={{ fontSize: "25px" }} /></button></div>}
+      {isCategoriesOpen ? (
+        <Categorias
+          config={{
+            itens,
+            setFilterItens,
+            isCategoriesOpen,
+            setIsCategoriesOpen,
+          }}
+        />
+      ) : (
+        <div id="botaoCategorias">
+          <button id="abrirCategorias" onClick={() => openCategories()}>
+            Categorias <TbHandClick style={{ fontSize: "25px" }} />
+          </button>
+        </div>
+      )}
 
       <div className="divMaterialsList">
-        <ol id="materialsList" style={{ padding: "0" }}>
-          {filterItens.map(
-            (item) =>
-              !epiList.filter((epi) => epi.id === item.id).length > 0 && (
-                <li className="materialItems" key={item.id}>
-                  <Cards
-                    id={item.id}
-                    name={item.name}
-                    quantidadeEpi={item.quantidade}
-                    image={item.image}
-                    preco={item.preco}
-                    estoque={item.estoque}
-                    prodTotal={item.prodTotal}
-                    descricao={item.descricao}
-                    categoria={item.categoria}
-                  />
-                </li>
-              )
-          )}
-        </ol>
+        {!isLoading ? (
+          <ol id="materialsList" style={{ padding: "0" }}>
+            {filterItens.map(
+              (item) =>
+                !epiList.filter((epi) => epi.id === item.id).length > 0 && (
+                  <li className="materialItems" key={item.id}>
+                    <Cards
+                      id={item.id}
+                      name={item.name}
+                      quantidadeEpi={item.quantidade}
+                      image={item.image}
+                      preco={item.preco}
+                      estoque={item.estoque}
+                      prodTotal={item.prodTotal}
+                      descricao={item.descricao}
+                      categoria={item.categoria}
+                    />
+                  </li>
+                )
+            )}
+          </ol>
+        ) : (
+          <h1>Carregando produtos...</h1>
+        )}
       </div>
+
       <div className="footerList">
         <Button
           id="concluir"
