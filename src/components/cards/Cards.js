@@ -9,7 +9,7 @@ import Descricao from "../Descricao/Descricao";
 export const Cards = (props) => {
   const { epiList, setEpiList } = useContext(EpiListContext);
 
-  let { id, name, quantidadeEpi, image, preco, estoque, prodTotal, descricao } = props;
+  let { id, name, quantidadeEpi, image, preco, estoque, prodTotal, descricao, categoria } = props;
 
   //criar um objeto para controlar aqueles que serão adicionados no cartContext
   const objControl = {
@@ -20,7 +20,8 @@ export const Cards = (props) => {
     preco,
     estoque,
     prodTotal,
-    descricao
+    descricao,
+    categoria
   };
 
   const [openDescription, setOpenDescription] = useState(false);

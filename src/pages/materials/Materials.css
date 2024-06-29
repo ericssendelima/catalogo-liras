@@ -5,10 +5,7 @@ div .materials {
   align-items: center;
   /* background-color: chartreuse; */
   width: 100%;
-  
 }
-
-
 
 li .materialsItems {
   display: block;
@@ -23,15 +20,13 @@ div .bottomEpiHeader {
   align-items: center;
 }
 
-h2#tituloCatalogo{
+h2#tituloCatalogo {
   color: white;
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 25px;
   margin-top: 15px;
-
 }
-
 
 span#visorCarrinho {
   display: flex;
@@ -46,6 +41,25 @@ span#visorCarrinho {
   border-radius: 5px;
 }
 
-div .footerLogo{
+div .footerLogo {
   width: 100%;
+}
+
+div#botaoCategorias{
+  height: 60px;
+  /* background-color: rgb(43, 226, 55); */
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+
+
+}
+
+button#abrirCategorias{
+  background-color: #77abbd;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
 }

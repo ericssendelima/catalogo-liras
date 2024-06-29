@@ -3,7 +3,7 @@ import "./Materials.css";
 import React, { useContext, useEffect, useState } from "react";
 import { BsCartCheck } from "react-icons/bs";
 import { FaChevronUp } from "react-icons/fa";
-
+import { TbHandClick } from "react-icons/tb";
 
 import { EpiListContext } from "../../context/EpiListContext";
 
@@ -17,45 +17,53 @@ import Header from "../../components/Header/Header.js";
 import { onValue, ref } from "firebase/database";
 
 import { db } from "../../firebase/config";
-import 'dotenv/config';
-
+import "dotenv/config";
+import Categorias from "../../components/Categorias/Categorias.js";
 
 const Materials = () => {
   const navigate = useNavigate();
 
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
   const { epiList } = useContext(EpiListContext);
-
-  const [itens2, setItens2] = useState([]);
+  const [itens, setItens] = useState([]);
+  const [filterItens, setFilterItens] = useState([]);
 
   useEffect(() => {
     onValue(
       ref(db, `${process.env.REACT_APP_PERM_ED}/products/`),
       (snapshot) => {
-        setItens2([]);
+        setItens([]);
         const data = snapshot.val();
 
-
         if (data !== undefined) {
-          setItens2([...Object.values(data)]);
-        } 
+          setItens([...Object.values(data)]);
+          setFilterItens([...Object.values(data)]);
+        }
       },
       (error) => alert(error)
     );
   }, []);
 
-
+  // console.log(itens2)
 
   const Concluir = async () => {
     navigate("/Cart");
+  };
+
+  const openCategories = () => {
+    setIsCategoriesOpen(!isCategoriesOpen);
   };
 
   return (
     <div className="materials">
       <Header />
       <h2 id="tituloCatalogo">Catálogo</h2>
+
+      {isCategoriesOpen ? <Categorias config={{ itens, setFilterItens, isCategoriesOpen, setIsCategoriesOpen }} /> : <div id="botaoCategorias"><button id="abrirCategorias" onClick={() => openCategories()}>Categorias <TbHandClick style={{ fontSize: "25px" }} /></button></div>}
+
       <div className="divMaterialsList">
         <ol id="materialsList" style={{ padding: "0" }}>
-          {itens2.map(
+          {filterItens.map(
             (item) =>
               !epiList.filter((epi) => epi.id === item.id).length > 0 && (
                 <li className="materialItems" key={item.id}>
@@ -68,6 +76,7 @@ const Materials = () => {
                     estoque={item.estoque}
                     prodTotal={item.prodTotal}
                     descricao={item.descricao}
+                    categoria={item.categoria}
                   />
                 </li>
               )
