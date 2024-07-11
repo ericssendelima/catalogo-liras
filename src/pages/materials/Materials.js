@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import "./Materials.css";
 
 import React, { useContext, useEffect, useState } from "react";
@@ -165,6 +166,7 @@ const Materials = () => {
       <div className="footerLogo">
         <Footer />
       </div>
+      <Analytics />
     </div>
   );
 };
